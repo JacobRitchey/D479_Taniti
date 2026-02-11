@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Package - Taniti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">TANITI</div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">EXPLORE</a></li>
+                <li><a href="packages.html" class="active">PACKAGES</a></li>
+                <li><a href="activities.html">ACTIVITIES</a></li>
+                <li><a href="plan.html">PLAN</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <a href="packages.html" class="btn-book">BOOK NOW</a>
+        </div>
+    </nav>
+
+    <!-- Package Builder -->
+    <section class="package-builder">
+        <div class="container-fluid">
+            <h1 class="page-title">Build Your Adventure</h1>
+            
+            <div class="builder-layout">
+                <!-- Left Side - Builder -->
+                <div class="builder-main">
+                    <!-- Travel Details -->
+                    <div class="builder-section">
+                        <h2>Travel Dates</h2>
+                        <div class="date-inputs">
+                            <div class="form-group">
+                                <label>Check-in</label>
+                                <input type="date" id="checkin" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Check-out</label>
+                                <input type="date" id="checkout" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="builder-section">
+                        <h2>Number of Guests</h2>
+                        <div class="guest-selector">
+                            <div class="guest-group">
+                                <label>Adults</label>
+                                <div class="number-input">
+                                    <button class="btn-minus" data-target="adults">-</button>
+                                    <input type="number" id="adults" value="2" min="1" readonly>
+                                    <button class="btn-plus" data-target="adults">+</button>
+                                </div>
+                            </div>
+                            <div class="guest-group">
+                                <label>Children</label>
+                                <div class="number-input">
+                                    <button class="btn-minus" data-target="children">-</button>
+                                    <input type="number" id="children" value="0" min="0" readonly>
+                                    <button class="btn-plus" data-target="children">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabs -->
+                    <div class="package-tabs">
+                        <button class="tab-btn active" data-tab="accommodations">Accommodations</button>
+                        <button class="tab-btn" data-tab="activities">Activities</button>
+                        <button class="tab-btn" data-tab="dining">Dining</button>
+                        <button class="tab-btn" data-tab="transportation">Transportation</button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content active" id="accommodations">
+                        <div class="options-grid">
+                            <div class="option-card" data-type="accommodation" data-price="299" data-name="4-Star Resort">
+                                <div><img src="media/hotel.jpg" alt="Beach Resort" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                                <div class="option-details">
+                                    <h3>4-Star Resort</h3>
+                                    <p class="option-description">Luxury beachfront resort with ocean views</p>
+                                    <p class="option-price">$299/night</p>
+                                </div>
+                                <button class="btn-select">Select</button>
+                            </div>
+
+                            <div class="option-card" data-type="accommodation" data-price="450" data-name="Beach House">
+                                <div><img src="media/beach_hut.jpg" alt="Beach Resort" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                                <div class="option-details">
+                                    <h3>Beach House</h3>
+                                    <p class="option-description">Private beach house with full amenities</p>
+                                    <p class="option-price">$450/night</p>
+                                </div>
+                                <button class="btn-select">Select</button>
+                            </div>
+
+                            <div class="option-card" data-type="accommodation" data-price="180" data-name="Island Lodge">
+                                <div><img src="media/lodge.jpg" alt="Jungle Lodge" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                                <div class="option-details">
+                                    <h3>Island Lodge</h3>
+                                    <p class="option-description">Cozy lodge near the edge of the rainforest</p>
+                                    <p class="option-price">$180/night</p>
+                                </div>
+                                <button class="btn-select">Select</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="activities">
+                        <p class="tab-intro">Add exciting state run activities to your package</p>
+                        <div class="options-grid">
+                            <div class="option-card" data-type="activity" data-price="89" data-name="Rainforest Zip-Line">
+                                <div><img src="media/zipline.jpg" alt="Zipline Jungle" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                                <div class="option-details">
+                                    <h3>Rainforest Zip-Line Adventure</h3>
+                                    <p class="option-description">Soar through the treetops</p>
+                                    <p class="option-time">🕐 9:00 AM - 2:00 PM</p>
+                                    <p class="option-price">$89/person</p>
+                                </div>
+                                <button class="btn-select">Add</button>
+                            </div>
+
+                            <div class="option-card" data-type="activity" data-price="65" data-name="Volcano Hike">
+                                <div><img src="media/volcanoe.jpg" alt="Volcano Hike" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                                <div class="option-details">
+                                    <h3>Breathtaking Guided Volcano Hike</h3>
+                                    <p class="option-description">Trek to the active volcano summit</p>
+                                    <p class="option-time">🕐 6:00 AM - 12:00 PM</p>
+                                    <p class="option-price">$65/person</p>
+                                </div>
+                                <button class="btn-select">Add</button>
+                            </div>
+
+                            <div class="option-card" data-type="activity" data-price="45" data-name="Snorkeling">
+                                <div><img src="media/snorkel.jpg" alt="Snorkel Turtle" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                                <div class="option-details">
+                                    <h3>Snorkeling at Yellow Leaf Bay</h3>
+                                    <p class="option-description">Explore vibrant coral reefs</p>
+                                    <p class="option-time">🕐 10:00 AM - 3:00 PM</p>
+                                    <p class="option-price">$45/person</p>
+                                </div>
+                                <button class="btn-select">Add</button>
+                            </div>
+
+                            <div class="option-card" data-type="activity" data-price="55" data-name="Cultural Tour">
+                                <div><img src="media/culture.jpg" alt="Forest Statue" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                                <div class="option-details">
+                                    <h3>Cultural Heritage Tour</h3>
+                                    <p class="option-description">Learn about indigenous culture</p>
+                                    <p class="option-time">🕐 9:30 AM - 1:30 PM</p>
+                                    <p class="option-price">$55/person</p>
+                                </div>
+                                <button class="btn-select">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="dining">
+                        <p class="tab-intro">Enhance your stay with dining options</p>
+                        <div class="options-grid">
+                            <div class="option-card" data-type="dining" data-price="85" data-name="Beachfront Dinner">
+                                <div><img src="media/sunsetbeach.jpg" alt="Beach Dinner" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                                <div class="option-details">
+                                    <h3>Sunset Beach Dinner</h3>
+                                    <p class="option-description">Romantic dinner on the beach</p>
+                                    <p class="option-price">$85/Couple</p>
+                                </div>
+                                <button class="btn-select">Add</button>
+                            </div>
+
+                            <div class="option-card" data-type="dining" data-price="120" data-name="Chef's Table">
+                                <div><img src="media/chef.jpg" alt="Dining Table" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                                <div class="option-details">
+                                    <h3>Chef's Table Experience</h3>
+                                    <p class="option-description">Multi-course tasting menu</p>
+                                    <p class="option-price">$120/person</p>
+                                </div>
+                                <button class="btn-select">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="transportation">
+                        <p class="tab-intro">Select your transportation options</p>
+                        <div class="options-grid">
+                            <div class="option-card" data-type="transport" data-price="75" data-name="Airport Transfer">
+                                <div><img src="media/shuttle.jpg" alt="Airport Bus" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                                <div class="option-details">
+                                    <h3>Airport Transfer</h3>
+                                    <p class="option-description">Round-trip airport shuttle</p>
+                                    <p class="option-price">$25 total</p>
+                                </div>
+                                <button class="btn-select">Add</button>
+                            </div>
+
+                            <div class="option-card" data-type="transport" data-price="45" data-name="Car Rental">
+                                <div><img src="media/rental.jpg" alt="Car Rentals" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                                <div class="option-details">
+                                    <h3>Car Rental</h3>
+                                    <p class="option-description">Compact car for your stay</p>
+                                    <p class="option-price">$45/day</p>
+                                </div>
+                                <button class="btn-select">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Summary -->
+                <div class="package-summary">
+                    <h2>Your Package</h2>
+                    
+                    <div class="summary-placeholder" id="emptyState">
+                        <p>Add items to build your package</p>
+                    </div>
+                    
+                    <div class="summary-items" id="summaryItems"></div>
+                    
+                    <div class="summary-totals">
+                        <div class="total-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Taxes & Fees:</span>
+                            <span id="taxes">$0</span>
+                        </div>
+                        <div class="total-row total-final">
+                            <span>Total:</span>
+                            <span id="total">$0</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-checkout" id="checkoutBtn">CHECKOUT</button>
+                    
+                    <div class="booking-note">
+                        <small>✓ Single-session checkout. All bookings (lodging, activities, flights) in one transaction. Clear pricing breakdown.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>TANITI</h4>
+                    <p>Your island paradise awaits</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="about.html">About Taniti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="plan.html">Travel Information</a></li>
+                        <li><a href="about.html#safety">Safety</a></li>
+                        <li><a href="about.html">Getting Around</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Taniti Tourism Board<br>
+                    Phone: +1 (555) 123-4567<br>
+                    Email: info@taniti.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Taniti Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

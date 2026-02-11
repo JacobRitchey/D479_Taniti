@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Taniti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">TANITI</div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">EXPLORE</a></li>
+                <li><a href="packages.html">PACKAGES</a></li>
+                <li><a href="activities.html" class="active">ACTIVITIES</a></li>
+                <li><a href="plan.html">PLAN</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <a href="packages.html" class="btn-book">BOOK NOW</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="hero-overlay"></div>
+        <video class="hero-video" autoplay muted loop playsinline>
+        <source src="media/water_crashing.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-content">
+            <h1>DISCOVER YOUR ADVENTURE</h1>
+            <p>From beaches to volcanoes, find your perfect experience</p>
+        </div>
+    </section>
+
+    <!-- Activities -->
+    <section class="activities-section">
+        <div class="container-fluid">
+            <div class="activities-layout">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar">
+                    <h3>Filter Activities</h3>
+                    
+                    <div class="filter-group">
+                        <h4>Activity Type</h4>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="filter-option" data-filter="adventure">
+                            <span>Adventure</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="filter-option" data-filter="family">
+                            <span>Family-Friendly</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="filter-option" data-filter="cultural">
+                            <span>Cultural</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="filter-option" data-filter="water">
+                            <span>Water Activities</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="filter-option" data-filter="nature">
+                            <span>Nature & Wildlife</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Duration</h4>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="filter-option" data-filter="half-day">
+                            <span>Half Day (&lt; 4 hrs)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="filter-option" data-filter="full-day">
+                            <span>Full Day (4-8 hrs)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" class="filter-option" data-filter="multi-day">
+                            <span>Multi-Day</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-range">
+                            <input type="range" min="0" max="200" value="200" class="price-slider" id="priceRange">
+                            <p class="price-label">$0 - $<span id="priceValue">200</span> per person</p>
+                        </div>
+                    </div>
+
+                    <button class="btn-clear-filters" id="clearFilters">CLEAR FILTERS</button>
+                </aside>
+
+                <!-- Activities Grid -->
+                <div class="activities-main">
+                    <div class="activities-header">
+                        <h2><span id="activityCount">8</span> Activities Available</h2>
+                        <div class="sort-controls">
+                            <label>Sort by:</label>
+                            <select class="sort-select" id="sortSelect">
+                                <option value="popular">Most Popular</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Highest Rated</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="activities-grid">
+                        <!-- Activity Card 1 -->
+                        <div class="activity-card" data-categories="adventure,family" data-duration="half-day" data-price="89">
+                            <div><img src="media/zipline.jpg" alt="Zipline through jungle" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                            <div class="activity-content">
+                                <div class="activity-badges">
+                                    <span class="badge-category">FAMILY</span>
+                                </div>
+                                <h3>Rainforest Zip-Line</h3>
+                                <div class="activity-rating">
+                                    <span class="stars">★ 4.8</span>
+                                    <span class="reviews">(234 reviews)</span>
+                                </div>
+                                <p class="activity-description">Soar through the rainforest canopy on our thrilling zip-line course with 8 different lines.</p>
+                                <div class="activity-details">
+                                    <span class="activity-time">🕐 9:00 AM - 2:00 PM</span>
+                                </div>
+                                <div class="activity-footer">
+                                    <div class="activity-price">
+                                        <span class="price-label">From</span>
+                                        <span class="price-amount">$89/person</span>
+                                    </div>
+                                    <button class="btn-view-details">VIEW DETAILS</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Card 2 -->
+                        <div class="activity-card" data-categories="adventure,nature" data-duration="half-day" data-price="65">
+                            <div><img src="media/hike.jpg" alt="Standing on volcano" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                            <div class="activity-content">
+                                <div class="activity-badges">
+                                    <span class="badge-category">ADVENTURE</span>
+                                </div>
+                                <h3>Guided Volcano Hike</h3>
+                                <div class="activity-rating">
+                                    <span class="stars">★ 4.9</span>
+                                    <span class="reviews">(187 reviews)</span>
+                                </div>
+                                <p class="activity-description">Trek to the summit of our active volcano with experienced guides. Witness steam vents and stunning views.</p>
+                                <div class="activity-details">
+                                    <span class="activity-time">🕐 Daily 6:00 AM</span>
+                                </div>
+                                <div class="activity-footer">
+                                    <div class="activity-price">
+                                        <span class="price-label">From</span>
+                                        <span class="price-amount">$65/person</span>
+                                    </div>
+                                    <button class="btn-view-details">VIEW DETAILS</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Card 3 -->
+                        <div class="activity-card" data-categories="water,family" data-duration="full-day" data-price="45">
+                            <div><img src="media/snorkel.jpg" alt="Snorkel with turtle" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                            <div class="activity-content">
+                                <div class="activity-badges">
+                                    <span class="badge-category">WATER</span>
+                                </div>
+                                <h3>Snorkeling at Yellow Leaf Bay</h3>
+                                <div class="activity-rating">
+                                    <span class="stars">★ 4.7</span>
+                                    <span class="reviews">(312 reviews)</span>
+                                </div>
+                                <p class="activity-description">Explore vibrant coral reefs and swim with tropical fish in crystal-clear waters.</p>
+                                <div class="activity-details">
+                                    <span class="activity-time">🕐 10:00 AM - 3:00 PM</span>
+                                </div>
+                                <div class="activity-footer">
+                                    <div class="activity-price">
+                                        <span class="price-label">From</span>
+                                        <span class="price-amount">$45/person</span>
+                                    </div>
+                                    <button class="btn-view-details">VIEW DETAILS</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Card 4 -->
+                        <div class="activity-card" data-categories="cultural" data-duration="half-day" data-price="55">
+                            <div><img src="media/culture.jpg" alt="Statue in forest" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                            <div class="activity-content">
+                                <div class="activity-badges">
+                                    <span class="badge-category">CULTURE</span>
+                                </div>
+                                <h3>Cultural Heritage Tour</h3>
+                                <div class="activity-rating">
+                                    <span class="stars">★ 4.8</span>
+                                    <span class="reviews">(156 reviews)</span>
+                                </div>
+                                <p class="activity-description">Learn about Taniti's rich indigenous heritage with visits to historical sites and local craftsmen.</p>
+                                <div class="activity-details">
+                                    <span class="activity-time">🕐 9:30 AM - 1:30 PM</span>
+                                </div>
+                                <div class="activity-footer">
+                                    <div class="activity-price">
+                                        <span class="price-label">From</span>
+                                        <span class="price-amount">$55/person</span>
+                                    </div>
+                                    <button class="btn-view-details">VIEW DETAILS</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Card 5 -->
+                        <div class="activity-card" data-categories="water,adventure" data-duration="half-day" data-price="95">
+                            <div><img src="media/scuba.jpg" alt="Deep Diving" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                            <div class="activity-content">
+                                <div class="activity-badges">
+                                    <span class="badge-category">WATER</span>
+                                </div>
+                                <h3>Scuba Diving Excursion</h3>
+                                <div class="activity-rating">
+                                    <span class="stars">★ 4.9</span>
+                                    <span class="reviews">(203 reviews)</span>
+                                </div>
+                                <p class="activity-description">Certified dive with experienced instructors. Explore underwater caves and see diverse marine life.</p>
+                                <div class="activity-details">
+                                    <span class="activity-time">🕐 8:00 AM - 12:00 PM</span>
+                                </div>
+                                <div class="activity-footer">
+                                    <div class="activity-price">
+                                        <span class="price-label">From</span>
+                                        <span class="price-amount">$95/person</span>
+                                    </div>
+                                    <button class="btn-view-details">VIEW DETAILS</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Card 6 -->
+                        <div class="activity-card" data-categories="nature,family" data-duration="half-day" data-price="40">
+                            <div><img src="media/wildlife.jpg" alt="A Toucan in the forest" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                            <div class="activity-content">
+                                <div class="activity-badges">
+                                    <span class="badge-category">NATURE</span>
+                                </div>
+                                <h3>Rainforest Wildlife Walk</h3>
+                                <div class="activity-rating">
+                                    <span class="stars">★ 4.6</span>
+                                    <span class="reviews">(128 reviews)</span>
+                                </div>
+                                <p class="activity-description">Guided nature walk through pristine rainforest. Spot exotic birds, monkeys, and tropical plants.</p>
+                                <div class="activity-details">
+                                    <span class="activity-time">🕐 7:00 AM - 11:00 AM</span>
+                                </div>
+                                <div class="activity-footer">
+                                    <div class="activity-price">
+                                        <span class="price-label">From</span>
+                                        <span class="price-amount">$40/person</span>
+                                    </div>
+                                    <button class="btn-view-details">VIEW DETAILS</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Card 7 -->
+                        <div class="activity-card" data-categories="adventure" data-duration="full-day" data-price="120">
+                            <div><img src="media/atv.jpg" alt="ATV in the forest" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                            <div class="activity-content">
+                                <div class="activity-badges">
+                                    <span class="badge-category">ADVENTURE</span>
+                                </div>
+                                <h3>Island ATV Adventure</h3>
+                                <div class="activity-rating">
+                                    <span class="stars">★ 4.8</span>
+                                    <span class="reviews">(167 reviews)</span>
+                                </div>
+                                <p class="activity-description">Explore rugged terrain on an all-terrain vehicle. Visit hidden beaches and mountain viewpoints.</p>
+                                <div class="activity-details">
+                                    <span class="activity-time">🕐 9:00 AM - 4:00 PM</span>
+                                </div>
+                                <div class="activity-footer">
+                                    <div class="activity-price">
+                                        <span class="price-label">From</span>
+                                        <span class="price-amount">$120/person</span>
+                                    </div>
+                                    <button class="btn-view-details">VIEW DETAILS</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity Card 8 -->
+                        <div class="activity-card" data-categories="water,family" data-duration="half-day" data-price="75">
+                            <div><img src="media/cruise.jpg" alt="Ship on the coast" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                            <div class="activity-content">
+                                <div class="activity-badges">
+                                    <span class="badge-category">FAMILY</span>
+                                </div>
+                                <h3>Sunset Catamaran Cruise</h3>
+                                <div class="activity-rating">
+                                    <span class="stars">★ 4.9</span>
+                                    <span class="reviews">(289 reviews)</span>
+                                </div>
+                                <p class="activity-description">Sail along the coast at sunset. Includes refreshments and opportunities for dolphin watching.</p>
+                                <div class="activity-details">
+                                    <span class="activity-time">🕐 4:30 PM - 7:30 PM</span>
+                                </div>
+                                <div class="activity-footer">
+                                    <div class="activity-price">
+                                        <span class="price-label">From</span>
+                                        <span class="price-amount">$75/person</span>
+                                    </div>
+                                    <button class="btn-view-details">VIEW DETAILS</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>TANITI</h4>
+                    <p>Your island paradise awaits</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="about.html">About Taniti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="plan.html">Travel Information</a></li>
+                        <li><a href="about.html#safety">Safety</a></li>
+                        <li><a href="about.html">Getting Around</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Taniti Tourism Board<br>
+                    Phone: +1 (555) 123-4567<br>
+                    Email: info@taniti.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Taniti Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================== Activity MODALS ====================== -->
+<!-- Modal 1 – Rainforest Zip‑Line -->
+<div id="modal-1" class="activity-modal" aria-hidden="true" style="display:none;">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-body">
+            <div class="activity-content">
+                <h3>Rainforest Zip-Line</h3>
+                <p class="activity-description">Soar above the emerald canopy of Taniti's ancient rainforest on our exhilarating zip-line adventure! With 8 thrilling lines stretching over 2,000 feet, this family-friendly tour offers breathtaking views of the island's lush interior and the sparkling waters of Yellow Leaf Bay below. Guided by certified instructors, the experience is safe, fun, and accessible for ages 8 and up. Perfect for adventure seekers and families alike, this activity combines adrenaline with the serene beauty of Taniti's natural environment.</p>
+
+                <div class="activity-details">
+                    <h4>What's Included:</h4>
+                    <ul class="activity-included-list">
+                        <li>All safety gear (harness, helmet, gloves)</li>
+                        <li>Guided tour by certified local guides</li>
+                        <li>Photo package (digital download)</li>
+                        <li>Light refreshments</li>
+                    </ul>
+
+                    <div class="activity-info">
+                        <p><strong>Location:</strong> Near Merriton Landing, just 15 minutes from Taniti City</p>
+                        <p><strong>Duration:</strong> 3 hours (9:00 AM – 2:00 PM)</p>
+                        <p><strong>Price:</strong> From $89 per person</p>
+                        <p><strong>Group Size:</strong> Maximum 12 participants per tour</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 – Guided Volcano Hike -->
+<div id="modal-2" class="activity-modal" aria-hidden="true" style="display:none;">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-body">
+            <div class="activity-content">
+                <h3>Guided Volcano Hike</h3>
+                <p class="activity-description">Embark on a once-in-a-lifetime journey to the summit of Taniti’s active volcano, a sacred site for the island’s indigenous people. This early-morning hike (6:00 AM daily) takes you through misty rainforests and volcanic rock formations, with experienced guides sharing stories of the island’s geology and cultural heritage. At the summit, you’ll witness steam vents, panoramic views of the surrounding coastline, and the chance to see rare native birds.</p>
+
+                <div class="activity-details">
+                    <h4>What's Included:</h4>
+                    <ul class="activity-included-list">
+                        <li>Guided tour with local cultural experts</li>
+                        <li>Snacks and water</li>
+                        <li>Safety equipment (boots, helmets)</li>
+                        <li>Cultural storytelling session</li>
+                    </ul>
+
+                    <div class="activity-info">
+                        <p><strong>Location:</strong> Taniti Volcano Trailhead (10 minutes from Taniti City)</p>
+                        <p><strong>Duration:</strong> 5 hours (6:00 AM – 11:00 AM)</p>
+                        <p><strong>Price:</strong> From $65 per person</p>
+                        <p><strong>Group Size:</strong> 10–15 participants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- Modal 3 – Snorkeling at Yellow Leaf Bay -->
+<div id="modal-3" class="activity-modal" aria-hidden="true" style="display:none;">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-body">
+            <div class="activity-content">
+                <h3>Snorkeling at Yellow Leaf Bay</h3>
+                <p class="activity-description">Dive into the crystal-clear waters of Yellow Leaf Bay and discover a vibrant underwater world teeming with life! This full-day snorkeling adventure takes you to some of Taniti’s most pristine coral reefs, where you can swim alongside tropical fish, sea turtles, and even reef sharks (non-aggressive). No prior experience is required—our certified instructors provide all gear and safety briefings.</p>
+
+                <div class="activity-details">
+                    <h4>What's Included:</h4>
+                    <ul class="activity-included-list">
+                        <li>Full snorkeling gear (mask, snorkel, fins)</li>
+                        <li>Life jacket and wetsuit (if needed)</li>
+                        <li>Lunch at a beachside restaurant</li>
+                        <li>Guided tour with marine biologists</li>
+                    </ul>
+
+                    <div class="activity-info">
+                        <p><strong>Location:</strong> Yellow Leaf Bay Beach (10 minutes from Taniti City)</p>
+                        <p><strong>Duration:</strong> 5 hours (10:00 AM – 3:00 PM)</p>
+                        <p><strong>Price:</strong> From $45 per person</p>
+                        <p><strong>Group Size:</strong> 15 participants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- Modal 4 – Cultural Heritage Tour -->
+<div id="modal-4" class="activity-modal" aria-hidden="true" style="display:none;">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-4-title">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-body">
+            <div class="activity-content">
+                <h3>Cultural Heritage Tour</h3>
+                <p class="activity-description">Step back in time and experience the rich traditions of Taniti’s indigenous people on this immersive cultural tour. Visit ancient stone carvings, sacred groves, and traditional villages, where you’ll meet local artisans and learn about the island’s history through storytelling, music, and dance. This half-day tour includes hands-on experiences like making woven baskets and tasting traditional dishes.</p>
+
+                <div class="activity-details">
+                    <h4>What's Included:</h4>
+                    <ul class="activity-included-list">
+                        <li>Guided tour with cultural ambassadors</li>
+                        <li>Traditional meal (local fish, taro, and coconut)</li>
+                        <li>Craft workshop (take home your creation)</li>
+                        <li>Cultural performance (hula and drumming)</li>
+                    </ul>
+
+                    <div class="activity-info">
+                        <p><strong>Location:</strong> Taniti City Cultural Center (15 minutes from the airport)</p>
+                        <p><strong>Duration:</strong> 4 hours (9:30 AM – 1:30 PM)</p>
+                        <p><strong>Price:</strong> From $55 per person</p>
+                        <p><strong>Group Size:</strong> 12–20 participants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- Modal 5 – Scuba Diving Excursion -->
+<div id="modal-5" class="activity-modal" aria-hidden="true" style="display:none;">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-5-title">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-body">
+            <div class="activity-content">
+                <h3>Scuba Diving Excursion</h3>
+                <p class="activity-description">Dive deep into the mysterious underwater caves and coral walls of Taniti’s marine sanctuary on this certified scuba adventure. Led by PADI-certified instructors, this half-day excursion is perfect for both beginners and experienced divers. Explore hidden sea caves, swim through schools of tropical fish, and witness the vibrant biodiversity of one of the Pacific’s least disturbed reef systems.</p>
+
+                <div class="activity-details">
+                    <h4>What's Included:</h4>
+                    <ul class="activity-included-list">
+                        <li>Full scuba gear (regulator, tank, wetsuit)</li>
+                        <li>Dive briefing and safety check</li>
+                        <li>Snacks and non-alcoholic drinks</li>
+                        <li>Photo and video package</li>
+                    </ul>
+
+                    <div class="activity-info">
+                        <p><strong>Location:</strong> Taniti Dive Center (near Merriton Landing)</p>
+                        <p><strong>Duration:</strong> 4 hours (8:00 AM – 12:00 PM)</p>
+                        <p><strong>Price:</strong> From $95 per person</p>
+                        <p><strong>Group Size:</strong> 8 participants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- Modal 6 – Rainforest Wildlife Walk -->
+<div id="modal-6" class="activity-modal" aria-hidden="true" style="display:none;">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-6-title">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-body">
+            <div class="activity-content">
+                <h3>Rainforest Wildlife Walk</h3>
+                <p class="activity-description">Join a guided nature walk through Taniti’s pristine rainforest and get up close with the island’s incredible wildlife. With expert naturalists, you’ll spot exotic birds like the Scarlet Toucan, playful monkeys, and rare reptiles. This family-friendly adventure is perfect for nature lovers and includes educational commentary on the island’s ecosystem and conservation efforts.</p>
+
+                <div class="activity-details">
+                    <h4>What's Included:</h4>
+                    <ul class="activity-included-list">
+                        <li>Guided tour with naturalists</li>
+                        <li>Binoculars and field guides</li>
+                        <li>Light refreshments</li>
+                        <li>Wildlife identification booklet</li>
+                    </ul>
+
+                    <div class="activity-info">
+                        <p><strong>Location:</strong> Rainforest Reserve (20 minutes from Taniti City)</p>
+                        <p><strong>Duration:</strong> 4 hours (7:00 AM – 11:00 AM)</p>
+                        <p><strong>Price:</strong> From $40 per person</p>
+                        <p><strong>Group Size:</strong> 10–18 participants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- Modal 7 – Island ATV Adventure -->
+<div id="modal-7" class="activity-modal" aria-hidden="true" style="display:none;">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-7-title">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-body">
+            <div class="activity-content">
+                <h3>Island ATV Adventure</h3>
+                <p class="activity-description">Ride an all-terrain vehicle (ATV) through rugged trails, hidden beaches, and mountain viewpoints on this full-day island adventure! Explore off-the-beaten-path locations that most tourists never see, including secluded coves, ancient lava tubes, and the island’s highest point. This adrenaline-pumping tour includes a safety briefing, helmet, and guided navigation by local guides.</p>
+
+                <div class="activity-details">
+                    <h4>What's Included:</h4>
+                    <ul class="activity-included-list">
+                        <li>ATV rental (fully insured)</li>
+                        <li>Safety gear (helmet, gloves, boots)</li>
+                        <li>Snacks and water</li>
+                        <li>Photo stop at scenic viewpoint</li>
+                    </ul>
+
+                    <div class="activity-info">
+                        <p><strong>Location:</strong> ATV Trailhead (near Merriton Landing)</p>
+                        <p><strong>Duration:</strong> 7 hours (9:00 AM – 4:00 PM)</p>
+                        <p><strong>Price:</strong> From $120 per person</p>
+                        <p><strong>Group Size:</strong> 6 participants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- Modal 8 – Sunset Catamaran Cruise -->
+<div id="modal-8" class="activity-modal" aria-hidden="true" style="display:none;">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-8-title">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-body">
+            <div class="activity-content">
+                <h3>Sunset Catamaran Cruise</h3>
+                <p class="activity-description">Sail along Taniti’s stunning coastline on a luxurious catamaran as the sun dips below the horizon. This romantic evening cruise includes a gourmet buffet, chilled drinks, and live music from local performers. Keep an eye out for dolphins and sea turtles, and enjoy panoramic views of the island’s golden beaches and volcanic peaks. Perfect for couples and families alike.</p>
+
+                <div class="activity-details">
+                    <h4>What's Included:</h4>
+                    <ul class="activity-included-list">
+                        <li>Full buffet dinner (local fish, grilled vegetables, tropical fruit)</li>
+                        <li>Non-alcoholic and alcoholic beverages</li>
+                        <li>Live music and dance performance</li>
+                        <li>Complimentary photo package</li>
+                    </ul>
+
+                    <div class="activity-info">
+                        <p><strong>Location:</strong> Taniti Harbor (5 minutes from Taniti City)</p>
+                        <p><strong>Duration:</strong> 3 hours (4:30 PM – 7:30 PM)</p>
+                        <p><strong>Price:</strong> From $75 per person</p>
+                        <p><strong>Group Size:</strong> 20–25 participants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

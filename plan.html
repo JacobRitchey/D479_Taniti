@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip - Taniti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">TANITI</div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">EXPLORE</a></li>
+                <li><a href="packages.html">PACKAGES</a></li>
+                <li><a href="activities.html">ACTIVITIES</a></li>
+                <li><a href="plan.html" class="active">PLAN</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <a href="packages.html" class="btn-book">BOOK NOW</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+        <div class="hero-overlay"></div>
+        <video class="hero-video" autoplay muted loop playsinline>
+        <source src="media/tour.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>PLAN YOUR PERFECT TRIP</h1>
+            <p>Everything you need to know before you go</p>
+        </div>
+    </section>
+
+    <!-- Planning Content -->
+    <section class="planning-content">
+        <div class="container">
+            <!-- Quick Planning Guide -->
+            <div class="planning-hero">
+                <h2>Your Journey to Paradise Starts Here</h2>
+                <div class="highlight-card"><img src="media/planning.jpg" alt="Trip Planning" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                <br>
+                <p class="lead">Whether you're seeking adventure, relaxation, or cultural immersion, we'll help you plan the perfect Taniti getaway.</p>
+            </div>
+
+            <!-- When to Visit -->
+            <div class="content-section">
+                <h2>When to Visit</h2>
+                
+                <div class="seasons-grid">
+                    <div class="season-card highlight-card">
+                        <div class="season-header" style="background:linear-gradient(135deg, #fee140 0%, #fa709a 100%);">
+                            <h3>Peak Season</h3>
+                            <p class="season-months">December - April</p>
+                        </div>
+                        <div class="season-body">
+                            <p><strong>Weather:</strong> Warm and dry, 75-85°F</p>
+                            <p><strong>Best For:</strong> Beach activities, hiking, all outdoor adventures</p>
+                            <p><strong>Note:</strong> Higher prices, book accommodations early</p>
+                        </div>
+                    </div>
+
+                    <div class="season-card highlight-card">
+                        <div class="season-header" style="background: linear-gradient(135deg, #fa709a 0%, #4facfe 100%);">
+                            <h3>Shoulder Season</h3>
+                            <p class="season-months">May - June, October - November</p>
+                        </div>
+                        <div class="season-body">
+                            <p><strong>Weather:</strong> Warm with occasional rain, 73-83°F</p>
+                            <p><strong>Best For:</strong> Great value, fewer crowds</p>
+                            <p><strong>Note:</strong> Best deals on accommodations</p>
+                        </div>
+                    </div>
+
+                    <div class="season-card highlight-card">
+                        <div class="season-header" style="background:linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <h3>Low Season</h3>
+                            <p class="season-months">July - September</p>
+                        </div>
+                        <div class="season-body">
+                            <p><strong>Weather:</strong> Humid with more frequent rain, 70-80°F</p>
+                            <p><strong>Best For:</strong> Budget travelers, rainforest activities</p>
+                            <p><strong>Note:</strong> Rainforest is lush and beautiful</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Getting There -->
+            <div class="content-section">
+                <h2>Getting to Taniti</h2>
+                
+                <div class="travel-options">
+                    <div class="travel-card highlight-card">
+                        <div class="travel-icon">✈️</div>
+                        <h3>By Air</h3>
+                        <div class="travel-details">
+                            <p><strong>Taniti International Airport (TNI)</strong></p>
+                            <ul>
+                                <li>Daily flights from Honolulu, Los Angeles, and Sydney</li>
+                                <li>Flight time: 3-4 hours from Hawaii</li>
+                                <li>Airport transfers available ($30-50)</li>
+                                <li>Rental cars at airport terminal</li>
+                            </ul>
+                            <p class="travel-note">💡 Book flights 2-3 months in advance for best rates</p>
+                        </div>
+                    </div>
+
+                    <div class="travel-card highlight-card">
+                        <div class="travel-icon">🚢</div>
+                        <h3>By Cruise Ship</h3>
+                        <div class="travel-details">
+                            <p><strong>Merriton Landing Port</strong></p>
+                            <ul>
+                                <li>Small cruise ships welcome</li>
+                                <li>Port facilities in main city</li>
+                                <li>Walking distance to attractions</li>
+                                <li>Shore excursions available</li>
+                            </ul>
+                            <p class="travel-note">💡 Check if your cruise line includes Taniti</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suggested Itineraries -->
+            <div class="content-section">
+                <h2>Suggested Itineraries</h2>
+                
+                <div class="itinerary-tabs">
+                    <button class="itinerary-tab active" data-itinerary="3-day">3-Day Weekend</button>
+                    <button class="itinerary-tab" data-itinerary="5-day">5-Day Escape</button>
+                    <button class="itinerary-tab" data-itinerary="7-day">7-Day Adventure</button>
+                </div>
+
+                <div class="itinerary-content active" id="3-day">
+                    <div class="itinerary-timeline">
+                        <div class="timeline-day">
+                            <div class="day-number">Day 1</div>
+                            <div class="day-content highlight-card">
+                                <h4>Arrival & Beach Relaxation</h4>
+                                <ul>
+                                    <li>Arrive and check into your hotel</li>
+                                    <li>Afternoon at Yellow Leaf Bay beach</li>
+                                    <li>Sunset dinner at beachfront restaurant</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-day">
+                            <div class="day-number">Day 2</div>
+                            <div class="day-content highlight-card">
+                                <h4>Adventure Day</h4>
+                                <ul>
+                                    <li>Morning: Guided volcano hike</li>
+                                    <li>Afternoon: Rainforest zip-line adventure</li>
+                                    <li>Evening: Local cultural performance</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-day">
+                            <div class="day-number">Day 3</div>
+                            <div class="day-content highlight-card">
+                                <h4>Water Activities & Departure</h4>
+                                <ul>
+                                    <li>Morning: Snorkeling excursion</li>
+                                    <li>Afternoon: Souvenir shopping in Merriton Landing</li>
+                                    <li>Evening: Departure</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-content" id="5-day">
+                    <div class="itinerary-timeline">
+                        <div class="timeline-day">
+                            <div class="day-number">Day 1</div>
+                            <div class="day-content highlight-card">
+                                <h4>Welcome to Taniti</h4>
+                                <ul>
+                                    <li>Arrive and settle into accommodation</li>
+                                    <li>Explore Merriton Landing</li>
+                                    <li>Welcome dinner with ocean views</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-day">
+                            <div class="day-number">Day 2</div>
+                            <div class="day-content highlight-card">
+                                <h4>Beach & Snorkeling</h4>
+                                <ul>
+                                    <li>Full day at Yellow Leaf Bay</li>
+                                    <li>Snorkeling the coral reefs</li>
+                                    <li>Beachside lunch and relaxation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-day">
+                            <div class="day-number">Day 3</div>
+                            <div class="day-content highlight-card">
+                                <h4>Volcano & Rainforest</h4>
+                                <ul>
+                                    <li>Early morning volcano hike</li>
+                                    <li>Afternoon rainforest zip-lining</li>
+                                    <li>Traditional dinner experience</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-day">
+                            <div class="day-number">Day 4</div>
+                            <div class="day-content highlight-card">
+                                <h4>Culture & Adventure</h4>
+                                <ul>
+                                    <li>Cultural heritage tour</li>
+                                    <li>Local craft workshops</li>
+                                    <li>Sunset catamaran cruise</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-day">
+                            <div class="day-number">Day 5</div>
+                            <div class="day-content highlight-card">
+                                <h4>Leisure & Departure</h4>
+                                <ul>
+                                    <li>Morning spa treatment or beach time</li>
+                                    <li>Last-minute shopping</li>
+                                    <li>Departure</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-content" id="7-day">
+                    <div class="itinerary-timeline">
+                        <div class="timeline-day">
+                            <div class="day-number">Days 1-2</div>
+                            <div class="day-content highlight-card">
+                                <h4>Arrival & Beach Exploration</h4>
+                                <ul>
+                                    <li>Settle in and explore your resort</li>
+                                    <li>Multiple beach visits and water sports</li>
+                                    <li>Snorkeling and paddleboarding</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-day">
+                            <div class="day-number">Days 3-4</div>
+                            <div class="day-content highlight-card">
+                                <h4>Adventure Activities</h4>
+                                <ul>
+                                    <li>Volcano hiking expedition</li>
+                                    <li>Rainforest zip-line and wildlife walks</li>
+                                    <li>ATV island tour</li>
+                                    <li>Scuba diving excursion</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-day">
+                            <div class="day-number">Days 5-6</div>
+                            <div class="day-content highlight-card">
+                                <h4>Cultural Immersion</h4>
+                                <ul>
+                                    <li>Cultural heritage tour and workshops</li>
+                                    <li>Traditional cooking class</li>
+                                    <li>Local markets and art galleries</li>
+                                    <li>Evening cultural performances</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-day">
+                            <div class="day-number">Day 7</div>
+                            <div class="day-content highlight-card">
+                                <h4>Relaxation & Departure</h4>
+                                <ul>
+                                    <li>Spa day and beach relaxation</li>
+                                    <li>Farewell dinner at top restaurant</li>
+                                    <li>Souvenir shopping and departure</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Packing Tips -->
+            <div class="content-section">
+                <h2>What to Pack</h2>
+                
+                <div class="packing-grid">
+                    <div class="packing-card highlight-card">
+                        <h3>🏖️ Beach Essentials</h3>
+                        <ul>
+                            <li>Swimwear and cover-ups</li>
+                            <li>Reef-safe sunscreen (SPF 50+)</li>
+                            <li>Beach towel</li>
+                            <li>Sunglasses and sun hat</li>
+                            <li>Waterproof phone case</li>
+                        </ul>
+                    </div>
+
+                    <div class="packing-card highlight-card">
+                        <h3>🥾 Adventure Gear</h3>
+                        <ul>
+                            <li>Comfortable hiking shoes</li>
+                            <li>Lightweight, breathable clothing</li>
+                            <li>Rain jacket or poncho</li>
+                            <li>Daypack for excursions</li>
+                            <li>Insect repellent</li>
+                        </ul>
+                    </div>
+
+                    <div class="packing-card highlight-card">
+                        <h3>📱 Tech & Documents</h3>
+                        <ul>
+                            <li>Passport (must be valid 6+ months)</li>
+                            <li>Travel insurance documents</li>
+                            <li>Phone and charger (120V compatible)</li>
+                            <li>Underwater camera</li>
+                            <li>E-reader for beach reading</li>
+                        </ul>
+                    </div>
+
+                    <div class="packing-card highlight-card">
+                        <h3>💊 Health & Safety</h3>
+                        <ul>
+                            <li>Prescription medications</li>
+                            <li>First aid kit</li>
+                            <li>Motion sickness medication</li>
+                            <li>Aloe vera for sunburn</li>
+                            <li>Hand sanitizer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="content-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-list ">
+                    <div class="faq-item highlight-card">
+                        <h3 class="faq-question">Do I need a visa to visit Taniti?</h3>
+                        <div class="faq-answer">
+                            <p>Most visitors from major countries do not need a visa for stays up to 90 days. Check with your local Taniti consulate for specific requirements based on your nationality.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item highlight-card">
+                        <h3 class="faq-question">Is it safe to drink tap water?</h3>
+                        <div class="faq-answer">
+                            <p>Yes, tap water in Taniti is safe to drink. However, bottled water is widely available if you prefer.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item highlight-card">
+                        <h3 class="faq-question">What language is spoken?</h3>
+                        <div class="faq-answer">
+                            <p>English is widely spoken in cities and tourist areas. Many locals are bilingual, speaking both English and the indigenous Tanitian language.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item highlight-card">
+                        <h3 class="faq-question">How much should I budget per day?</h3>
+                        <div class="faq-answer">
+                            <p>Budget travelers: $75-100/day | Mid-range: $150-250/day | Luxury: $350+/day. This includes accommodation, food, activities, and transportation.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item highlight-card">
+                        <h3 class="faq-question">Is Taniti family-friendly?</h3>
+                        <div class="faq-answer">
+                            <p>Absolutely! Taniti offers many family-friendly activities including calm beaches, cultural tours, and wildlife experiences. Most resorts offer kids' clubs and family packages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h2>Ready to Book Your Adventure?</h2>
+                <p>Start building your perfect Taniti package today</p>
+                <a href="packages.html" class="btn-hero">BUILD YOUR PACKAGE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>TANITI</h4>
+                    <p>Your island paradise awaits</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="about.html">About Taniti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="plan.html">Travel Information</a></li>
+                        <li><a href="about.html#safety">Safety</a></li>
+                        <li><a href="about.html">Getting Around</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Taniti Tourism Board<br>
+                    Phone: +1 (555) 123-4567<br>
+                    Email: info@taniti.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Taniti Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
