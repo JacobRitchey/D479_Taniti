@@ -1553,6 +1553,24 @@ body {
         align-items: center;
         text-align: center;
     }
+    
+    /* Fix package builder overflow on mobile */
+    .container-fluid {
+        padding: 0 15px;
+    }
+    
+    .builder-main {
+        padding: 20px 15px;
+    }
+    
+    .package-summary {
+        padding: 20px 15px;
+    }
+    
+    .page-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
 }
 /* -------------------------------------------------
    1️⃣ Overlay (darkened background)
