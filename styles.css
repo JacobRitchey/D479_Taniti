@@ -365,6 +365,11 @@ body {
     border-radius: 12px;
     padding: 40px;
     box-shadow: var(--shadow-sm);
+    min-width: 0; /* Allow grid item to shrink below content size */
+}
+
+.package-summary {
+    min-width: 0; /* Allow grid item to shrink below content size */
 }
 
 .builder-section {
@@ -508,6 +513,7 @@ body {
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.3s;
+    min-width: 0; /* Allow shrinking below min content */
 }
 
 .option-card:hover {
@@ -1534,6 +1540,11 @@ body {
     
     .options-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .option-card {
+        min-width: 0;
     }
     
     .activities-grid {
