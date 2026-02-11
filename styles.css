@@ -1462,6 +1462,15 @@ body {
     .filters-sidebar {
         position: static;
     }
+    
+    /* Reduce padding on tablet sizes */
+    .builder-main {
+        padding: 30px 20px;
+    }
+    
+    .package-summary {
+        padding: 30px 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1555,21 +1564,38 @@ body {
     }
     
     /* Fix package builder overflow on mobile */
+    .package-builder {
+        padding: 20px 0 40px;
+    }
+    
     .container-fluid {
-        padding: 0 15px;
+        padding: 0 10px;
+        max-width: 100%;
     }
     
     .builder-main {
-        padding: 20px 15px;
+        padding: 15px;
+        border-radius: 8px;
     }
     
     .package-summary {
-        padding: 20px 15px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+    
+    .builder-section {
+        margin-bottom: 25px;
+    }
+    
+    .builder-section h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
     }
     
     .page-title {
         font-size: 28px;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
+        padding: 0 10px;
     }
 }
 /* -------------------------------------------------
